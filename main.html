@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather APP</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    
+    <div class="intro">
+        <h1 class="app-heading">🌤️ Weather Wizard 🌧️</h1>
+        <h1>Welcome to Weather App</h1>
+        <p>Your go-to solution for accurate weather updates.</p>
+        <p>Enter a city to get the latest weather conditions!</p>
+        <button class="start-btn">Get Started</button>
+    </div>
+    
+    <form class="weather-form">
+        <input type="text" name="name" id="name" placeholder="Enter City" class="city-input">
+        <button type="submit" class="btn">Get Weather</button>
+    </form>
+
+    <div class="card" style="display: none;">
+        <h1 class="cityDisplay">City Name</h1>
+        <p class="temp">90°F</p>
+        <p class="hum">75%</p>
+        <p class="description">Clear Sky</p>
+        <p class="wheather-emoji">☀️</p>
+        <p class="error">Please Enter a City</p>
+
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>

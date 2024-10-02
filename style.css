@@ -1,0 +1,282 @@
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, hsl(210, 100%, 60%), hsl(330, 100%, 60%));
+    background-color: hsl(0, 0%, 95%);
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+
+/*intro*/
+
+.intro {
+    text-align: center;
+    margin-bottom: 30px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.intro h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.intro p {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: hsla(0, 0%, 100%, 0.8);
+}
+
+.start-btn {
+    padding: 10px 20px;
+    font-weight: bold;
+    font-size: 1.5rem;
+    border-radius: 10px;
+    background-color: hsl(200, 100%, 50%);
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.start-btn:hover {
+    background-color: hsl(200, 100%, 40%);
+    transform: scale(1.05);
+}
+
+.start-btn:active {
+    transform: scale(0.98);
+}
+
+
+.weather-form {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.city-input {
+    padding: 10px;
+    font-size: 2rem;
+    font-weight: bold;
+    border-radius: 10px;
+    border: 1px solid hsl(0, 0%, 80%);
+    margin-bottom: 10px;
+    transition: border-color 0.3s ease;
+}
+
+.city-input:focus {
+    border-color: hsl(210, 100%, 50%);
+    outline: none;
+}
+
+.btn {
+    padding: 10px 20px;
+    font-weight: bold;
+    font-size: 2rem;
+    border-radius: 10px;
+    background-color: hsl(200, 100%, 50%);
+    color: white;
+    transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.btn:hover {
+    background-color: hsl(200, 100%, 40%);
+    cursor: pointer;
+    transform: scale(1.05); 
+}
+
+.btn:active {
+    transform: scale(0.98); 
+}
+
+.card {
+    background: linear-gradient(145deg, hsl(210, 100%, 65%), hsl(34, 100%, 70%), hsl(34, 100%, 50%));
+    border-radius: 20px;
+    padding: 50px;
+    height: 500px;
+    width: 500px;
+    margin-bottom: 10px;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    opacity: 0;
+    transform: translateY(50px); 
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3), -5px -5px 15px rgba(255, 255, 255, 0.5);
+    animation: slideUpFadeIn 1s forwards ease-in-out; 
+}
+
+h1 {
+    font-size: 3.5rem;
+    margin-top: 0;
+    margin-bottom: 25px;
+}
+
+p {
+    font-size: 1.5rem;
+    margin-top: 5px;
+}
+
+.cityDisplay, .temp {
+    font-size: 3rem;
+    font-weight: bold;
+    color: hsla(0, 0%, 0%, 0.758);
+}
+
+.hum {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: hsla(0, 0%, 0%, 0.758);
+}
+
+.description {
+    margin-top: 10px;
+    font-style: italic;
+    font-size: 2.5rem;
+    font-weight: bolder;
+}
+
+.wheather-emoji {
+    font-size: 7.5rem;
+    font-weight: bold;
+}
+
+.error {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: hsla(0, 0%, 0%, 0.758);
+}
+
+
+.app-heading {
+    font-size: 6rem; /* Larger font size for emphasis */
+    margin-bottom: 20px;
+    color: white;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Shadow for depth */
+    animation: bounceIn 1s ease-in-out; /* Animation class */
+}
+
+/* Keyframes for the bounce-in effect */
+@keyframes bounceIn {
+    0% {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideUpFadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+/* Media Queries for Mobile Responsiveness */
+@media (max-width: 768px) {
+    .city-input {
+        font-size: 1.5rem; /* Smaller font for input */
+        width: 80%; /* Responsive width */
+    }
+
+    .btn {
+        font-size: 1.5rem; /* Smaller button font */
+    }
+
+    .card {
+        height: auto; /* Adjust card height */
+        width: 90%; /* Responsive width */
+        padding: 20px; /* Less padding on smaller screens */
+    }
+
+    h1 {
+        font-size: 2.5rem; /* Adjust heading font size */
+    }
+
+    .cityDisplay, .temp {
+        font-size: 2.5rem; /* Smaller city and temperature font size */
+    }
+
+    .hum {
+        font-size: 2rem; /* Smaller humidity font size */
+    }
+
+    .description {
+        font-size: 2rem; /* Smaller description font size */
+    }
+
+    .wheather-emoji {
+        font-size: 5rem; /* Smaller emoji font size */
+    }
+
+    .error {
+        font-size: 2rem; /* Smaller error font size */
+    }
+}
+
+@media (max-width: 480px) {
+    .city-input {
+        font-size: 1.2rem; /* Further adjust input font for very small screens */
+    }
+
+    .btn {
+        font-size: 1.2rem; /* Further adjust button font */
+    }
+
+    h1 {
+        font-size: 2rem; /* Further adjust heading font size */
+    }
+
+    .cityDisplay, .temp {
+        font-size: 2rem; /* Further adjust city and temperature font size */
+    }
+
+    .hum {
+        font-size: 1.5rem; /* Further adjust humidity font size */
+    }
+
+    .description {
+        font-size: 1.5rem; /* Further adjust description font size */
+    }
+
+    .wheather-emoji {
+        font-size: 4rem; /* Further adjust emoji font size */
+    }
+
+    .error {
+        font-size: 1.5rem; /* Further adjust error font size */
+    }
+}
